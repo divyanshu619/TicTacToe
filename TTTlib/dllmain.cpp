@@ -4,10 +4,12 @@ void DLL_EXPORT xyz(const LPCSTR sometext)
 {
     MessageBoxA(0, sometext, "DLL Message", MB_OK | MB_ICONINFORMATION);
 }
-int st[8][3]= {{0,1,2},{3,4,5},{6,7,8},{0,3,6},{1,4,7},{2,5,8},{0,4,8},{2,4,6}};
+int victory_conditions[8][3]= {{0,1,2},{3,4,5},{6,7,8},{0,3,6},{1,4,7},{2,5,8},{0,4,8},{2,4,6}};
 int corners[4] = {0,2,6,8};
 int edges[4] = {1,3,5,7};
 int status[8]= {0};
+
+//Updates the status array based on the current tic-tac-toe board
 void DLL_EXPORT _check(int a[])
 {
 
@@ -17,7 +19,7 @@ void DLL_EXPORT _check(int a[])
         s=0;
         for(int j=0; j<3; j++)
         {
-            s+=a[st[i][j]];
+            s+=a[victory_conditions[i][j]];
 
         }
         status[i]=s;
@@ -37,8 +39,8 @@ int DLL_EXPORT _rfill(int a[])
     {
         for(int j=0; j<3; j++)
         {
-            if(a[st[i][j]]==0)
-                return st[i][j];
+            if(a[victory_conditions[i][j]]==0)
+                return victory_conditions[i][j];
         }
 
     }
