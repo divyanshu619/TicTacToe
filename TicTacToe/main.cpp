@@ -7,9 +7,9 @@
 HINSTANCE hInst;
 HWND hbn;
 
-int TFlag=1;
-int TCount=0;
-int CVResult;
+int TurnFlag=1;
+int TurnCount=0;
+int CheckVictorResult;
 int TTTArray[9]= {0,0,0,
                   0,0,0,
                   0,0,0
@@ -49,7 +49,7 @@ BOOL CALLBACK DlgMain(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)//TH
         case IDC_BUTTON8:
         case IDC_BUTTON9://I COULD HAVE USED THE RANGE OR LIMITS...THIS IS FOR THE SAKE OF UNDERSTANDABLITY....
             _move(LOWORD(wParam),hwndDlg);
-            if(TCount==0)
+            if(TurnCount==0)
                 break;
             _move(1000+AI(TTTArray),hwndDlg);
             break;
@@ -85,10 +85,10 @@ int _DrawUI(HWND hwndDlg)
 }
 int _ChangeTurn()
 {
-    if(TFlag==1)
-        TFlag=-1;
+    if(TurnFlag==1)
+        TurnFlag=-1;
     else
-        TFlag=1;
+        TurnFlag=1;
     return 0;
 }
 int _ResetUI(HWND hwndDlg)
@@ -100,30 +100,30 @@ int _ResetUI(HWND hwndDlg)
         EnableWindow(hbn,TRUE);
     }
     _DrawUI(hwndDlg);
-    TFlag=1;
-    TCount=0;
+    TurnFlag=1;
+    TurnCount=0;
     return 0;
 }
 int _move(int choice,HWND hwndDlg)
 {
-    TCount++;
-    TTTArray[choice-1000]=TFlag;
+    TurnCount++;
+    TTTArray[choice-1000]=TurnFlag;
     _ChangeTurn();
     _DrawUI(hwndDlg);
     hbn=GetDlgItem(hwndDlg,choice);
     EnableWindow(hbn,FALSE);
-    CVResult=_CheckVictor(TTTArray);
-    if(CVResult==1)
+    CheckVictorResult=_CheckVictor(TTTArray);
+    if(CheckVictorResult==1)
     {
         MessageBox(hwndDlg,"X wins","Result",MB_OK);
         _ResetUI(hwndDlg);
     }
-    else if(CVResult==-1)
+    else if(CheckVictorResult==-1)
     {
         MessageBox(hwndDlg,"O wins","Result",MB_OK);
         _ResetUI(hwndDlg);
     }
-    else if(TCount==9)
+    else if(TurnCount==9)
     {
         MessageBox(hwndDlg,"Match Drawn","Result",MB_OK);
         _ResetUI(hwndDlg);
