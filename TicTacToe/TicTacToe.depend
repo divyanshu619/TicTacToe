@@ -1,0 +1,50 @@
+# depslib dependency file v1.0
+1403868665 source:c:\users\harsh\documents\codeblocks\tictactoe\resource.rc
+	"windows.h"
+	"commctrl.h"
+	"resource.h"
+
+1403810687 c:\users\harsh\documents\codeblocks\tictactoe\resource.h
+
+1403810687 source:c:\users\harsh\documents\codeblocks\tictactoe\main.cpp
+	<windows.h>
+	<commctrl.h>
+	<stdio.h>
+	"resource.h"
+	"dllmain.h"
+
+1403807369 c:\users\harsh\documents\codeblocks\tictactoe\dllmain.h
+	<windows.h>
+
+1404825153 source:c:\users\ashu\desktop\ttt\tictactoe\main.cpp
+	<windows.h>
+	<commctrl.h>
+	<stdio.h>
+	"resource.h"
+	"dllmain.h"
+
+1404825155 c:\users\ashu\desktop\ttt\tictactoe\resource.h
+
+1404825152 c:\users\ashu\desktop\ttt\tictactoe\dllmain.h
+	<windows.h>
+
+1407058473 source:d:\horse raaz\ttt\tictactoe\main.cpp
+	<windows.h>
+	<commctrl.h>
+	<stdio.h>
+	"resource.h"
+	"dllmain.h"
+
+1406986520 d:\horse raaz\ttt\tictactoe\resource.h
+
+1406979978 d:\horse raaz\ttt\tictactoe\dllmain.h
+	<windows.h>
+
+1406976186 source:d:\horse raaz\ttt\works.cpp
+	<iostream>
+
+1406992198 source:d:\horse raaz\ttt\tictactoe\resource.rc
+	"windows.h"
+	"commctrl.h"
+	"resource.h"
+

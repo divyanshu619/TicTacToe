@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="TicTacToe">
+		<Project filename="TicTacToe/TicTacToe.cbp">
+			<Depends filename="TTTlib/TTTlib.cbp" />
+		</Project>
+		<Project filename="TTTlib/TTTlib.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>

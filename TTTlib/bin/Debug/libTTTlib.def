@@ -1,0 +1,7 @@
+EXPORTS
+    AI @1
+    DllMain@12 @2
+    _CheckVictor @3
+    _check @4
+    _rfill @5
+    xyz @6

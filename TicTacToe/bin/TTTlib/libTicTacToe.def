@@ -1,0 +1,13 @@
+EXPORTS
+    CVResult @1 DATA
+    TCount @2 DATA
+    TFlag @3 DATA
+    TTTArray @4 DATA
+    WinMain@16 @5
+    _Z11_ChangeTurnv @6
+    _Z5_moveiP6HWND__ @7
+    _Z7DlgMainP6HWND__jjl@16 @8
+    _Z7_DrawUIP6HWND__ @9
+    _Z8_ResetUIP6HWND__ @10
+    hInst @11 DATA
+    hbn @12 DATA
